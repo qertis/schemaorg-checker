@@ -1,0 +1,34 @@
+{
+  "name": "schemaorg-checker",
+  "version": "1.0.0",
+  "description": "Schema.org document checker",
+  "main": "index.cjs",
+  "scripts": {
+    "test": "node test/index.test.cjs"
+  },
+  "keywords": [
+    "Schema.org document checker",
+    "Schema.org document validator",
+    "Schema.org node validation"
+  ],
+  "files": [
+    "index.cjs"
+  ],
+  "exports": {
+    "require": "index.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qertis/schemaorg-checker.git"
+  },
+  "author": "Denis Baskovsky (https://baskovsky.ru)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qertis/schemaorg-checker/issues"
+  },
+  "homepage": "https://github.com/qertis/schemaorg-checker#readme",
+  "dependencies": {
+    "schema.org": "~3.1.1",
+    "validator": "~13.7.0"
+  }
+}
