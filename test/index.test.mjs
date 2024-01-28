@@ -1,14 +1,14 @@
-const test = require('node:test');
-const assert = require('node:assert/strict');
-const checkSchema = require('../index.cjs');
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import checkSchema, {schemaOrg} from '../index.mjs';
 
-test('ActivityStreams CJS', function () {
+test('ActivityStreams MJS', function () {
     assert.equal(checkSchema({}), false);
     assert.equal(checkSchema(undefined), false);
     assert.equal(checkSchema(null), false);
     assert.equal(checkSchema(''), false);
     assert.equal(checkSchema([]), false);
-    assert.equal(typeof require('../index.cjs').schemaOrg, 'object');
+    assert.equal(typeof schemaOrg, 'object');
 
     assert.equal(
         checkSchema({

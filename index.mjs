@@ -1,9 +1,9 @@
-const validator = require('validator');
-const SchemaOrg = require('schema.org');
+import validator from 'validator';
+import SchemaOrg from 'schema.org';
 
-const schemaOrg = new SchemaOrg();
+export const schemaOrg = new SchemaOrg();
 
-module.exports = (document) => {
+export default function isSchemaOrg (document) {
   if (!document) {
     return false;
   }
@@ -23,5 +23,3 @@ module.exports = (document) => {
   }
   return false;
 };
-
-module.exports.schemaOrg = schemaOrg;
